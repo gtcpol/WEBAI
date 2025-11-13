@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nando AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Nando AI</h2>
+
+    <form method="post" action="/chat">
+        <input type="text" name="chat" placeholder="Tulis pesan..." required>
+        <button type="submit">Kirim</button>
+    </form>
+
+    {% if ai_output %}
+        <p><b>Pertanyaanmu:</b> {{ pesan_user }}</p>
+        <p><b>Jawaban :</b> {{ ai_output }}</p>
+    {% endif %}
+</body>
+</html>
